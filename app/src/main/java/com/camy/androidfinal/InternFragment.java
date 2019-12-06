@@ -31,4 +31,10 @@ public class InternFragment extends Fragment implements DataFromAddEmployeeFragm
 
     TextView schoolName;
     Button addIntern;
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.intern_fragment_layout, container, false);
+    }
 }
