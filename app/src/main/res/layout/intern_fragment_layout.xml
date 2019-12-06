@@ -22,5 +22,11 @@
     </android.support.design.widget.TextInputLayout>
 
 
+    <Button
+        android:id="@+id/btn_add_intern"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Add Intern" />
 
 </LinearLayout>
