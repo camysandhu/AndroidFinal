@@ -33,4 +33,11 @@ public class FullTimeFragment extends Fragment implements DataFromAddEmployeeFra
     TextView salary;
     TextView bonus;
     Button addIntern;
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fulltime_fragment_layout, container, false);
+
+    }
 }
