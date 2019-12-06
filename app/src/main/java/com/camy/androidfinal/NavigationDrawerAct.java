@@ -100,4 +100,14 @@ public class NavigationDrawerAct extends AppCompatActivity {
 
 
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                this.nav_drawer.openDrawer(Gravity.START);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
