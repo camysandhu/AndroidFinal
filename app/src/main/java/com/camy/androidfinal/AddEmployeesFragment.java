@@ -53,76 +53,7 @@ public class AddEmployeesFragment extends Fragment implements View.OnClickListen
         this.text_date_of_birth.setOnClickListener(this) ;
 
         this.gender = view.findViewById(R.id.radio_group_gender);
-        this.gender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                switch (checkedId)
-                {
-                    case R.id.radio_female :
-                        // Toast.makeText(AddEmployeesFragment.this.getContext(), "Female" , Toast.LENGTH_LONG).show();
-                        Snackbar.make(group,"Female", Snackbar.LENGTH_SHORT).show();
-                        break;
-                    default:
-                        //Toast.makeText(AddEmployeesFragment.this.getContext(), "male" , Toast.LENGTH_LONG).show();
-
-                        Snackbar.make(group,"Male", Snackbar.LENGTH_SHORT).show();
-                        break;
-                }
-            }
-        });
-
-
-
-        this.employementtype = view.findViewById(R.id.radio_group_employment);
-        this.employementtype.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-                FragmentTransaction fragmentTransaction;
-
-                switch (checkedId)
-                {
-                    case R.id.radio_parttime :
-                        if(AddEmployeesFragment.this.partTimeFragment  == null)
-                        {
-                            AddEmployeesFragment.this.partTimeFragment = new PartTimeFragment();
-                            AddEmployeesFragment.this.partTimeFragment.viewsFromAddEmployeeFragment(text_name, text_age ,gender, text_date_of_birth , vehicle);
-                        }
-                        fragmentTransaction = AddEmployeesFragment.this.fragmentManager.beginTransaction();
-                        fragmentTransaction.replace(R.id.frame_layout_employment, AddEmployeesFragment.this.partTimeFragment);
-                        fragmentTransaction.commit();
-                        Snackbar.make(employementtype,"ParTime Employee",Snackbar.LENGTH_SHORT).show();
-                       // Toast.makeText(AddEmployeesFragment.this.getContext(), "parttime" , Toast.LENGTH_LONG).show();
-                        break;
-                    case R.id.radio_fulltime :
-                        if(AddEmployeesFragment.this.fullTimeFragment  == null)
-                        {
-                            AddEmployeesFragment.this.fullTimeFragment = new FullTimeFragment();
-                            AddEmployeesFragment.this.fullTimeFragment.viewsFromAddEmployeeFragment(text_name, text_age ,gender , text_date_of_birth , vehicle);
-                        }
-                        fragmentTransaction = AddEmployeesFragment.this.fragmentManager.beginTransaction();
-                        fragmentTransaction.replace(R.id.frame_layout_employment, AddEmployeesFragment.this.fullTimeFragment);
-                        fragmentTransaction.commit();
-                        Snackbar.make(employementtype,"FullTime Employee",Snackbar.LENGTH_SHORT).show();
-                       // Toast.makeText(AddEmployeesFragment.this.getContext(), "fulltime" , Toast.LENGTH_LONG).show();
-                        break;
-                    case R.id.radio_intern :
-                        if(AddEmployeesFragment.this.internFragment  == null)
-                        {
-                            AddEmployeesFragment.this.internFragment = new InternFragment();
-                            AddEmployeesFragment.this.internFragment.viewsFromAddEmployeeFragment(text_name, text_age ,gender , text_date_of_birth , vehicle);
-                        }
-                        fragmentTransaction = AddEmployeesFragment.this.fragmentManager.beginTransaction();
-                        fragmentTransaction.replace(R.id.frame_layout_employment, AddEmployeesFragment.this.internFragment);
-                        fragmentTransaction.commit();
-                        Snackbar.make(employementtype,"Intern Employee",Snackbar.LENGTH_SHORT).show();
-                       // Toast.makeText(AddEmployeesFragment.this.getContext(), "intern" , Toast.LENGTH_LONG).show();
-                        break;
-                }
-            }
-        });
-
-
+//
 
 
 

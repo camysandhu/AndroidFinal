@@ -79,11 +79,11 @@ public class NavigationDrawerAct extends AppCompatActivity {
                         {
                             addEmployeesFragment = new AddEmployeesFragment();
                         }
-                        fragmentTransaction = fragmentManager.beginTransaction();
-                        fragmentTransaction.replace(R.id.frame_layout, addEmployeesFragment);
-                        fragmentTransaction.commit();
-                        actionbar.setTitle("Add employee");
-                        NavigationDrawerAct.this.nav_drawer.closeDrawer(Gravity.START, true);
+//                        fragmentTransaction = fragmentManager.beginTransaction();
+//                        fragmentTransaction.replace(R.id.frame_layout, addEmployeesFragment);
+//                        fragmentTransaction.commit();
+//                        actionbar.setTitle("Add employee");
+//                       NavigationDrawerAct.this.nav_drawer.closeDrawer(Gravity.START, true);
                         Snackbar.make(nav_view,"Add Employee",Snackbar.LENGTH_SHORT).show();
                       //  Toast.makeText(NavigationDrawerAct.this, "Add employee" , Toast.LENGTH_LONG).show();
                         break;
