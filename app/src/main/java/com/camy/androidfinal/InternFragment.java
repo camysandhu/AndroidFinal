@@ -36,5 +36,18 @@ public class InternFragment extends Fragment implements DataFromAddEmployeeFragm
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.intern_fragment_layout, container, false);
+
+
+
+
     }
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+
+        this.schoolName = view.findViewById(R.id.text_schoolname);
+
+
+        this.addIntern = view.findViewById(R.id.btn_add_intern);
 }
