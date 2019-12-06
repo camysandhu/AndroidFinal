@@ -59,6 +59,45 @@ public class NavigationDrawerAct extends AppCompatActivity {
 
         nav_view = findViewById(R.id.nav_view);
 
+        nav_view.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId())
+                {
+                    case R.id.employees :
+                        fragmentTransaction = fragmentManager.beginTransaction();
+                        fragmentTransaction.replace(R.id.frame_layout, employeeFragment, null);
+                        fragmentTransaction.commit();
+                        actionbar.setTitle("Employees");
+                        NavigationDrawerAct.this.nav_drawer.closeDrawer(Gravity.START, true);
+                        Toast.makeText(NavigationDrawerAct.this, "Employees" , Toast.LENGTH_LONG).show();
+                        break;
+                    case R.id.add_employee :
+                        if(addEmployeesFragment == null)
+                        {
+                            addEmployeesFragment = new AddEmployeesFragment();
+                        }
+                        fragmentTransaction = fragmentManager.beginTransaction();
+                        fragmentTransaction.replace(R.id.frame_layout, addEmployeesFragment);
+                        fragmentTransaction.commit();
+                        actionbar.setTitle("Add employee");
+                        NavigationDrawerAct.this.nav_drawer.closeDrawer(Gravity.START, true);
+                        Toast.makeText(NavigationDrawerAct.this, "Add employee" , Toast.LENGTH_LONG).show();
+                        break;
+
+                    case R.id.logout :
+                        startActivity(new Intent(NavigationDrawerAct.this, LoginActivity.class));
+                        Toast.makeText(NavigationDrawerAct.this, "Logout" , Toast.LENGTH_LONG).show();
+                        break;
+
+                }
+
+
+
+                return true;
+            }
+        });
+
 
     }
 }
