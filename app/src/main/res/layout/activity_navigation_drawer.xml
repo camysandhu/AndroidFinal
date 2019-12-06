@@ -41,7 +41,7 @@
         android:layout_gravity="start"
         android:background="@color/light_grey"
         android:fitsSystemWindows="true"
-        app:itemIconTint="@color/yello"
+        app:itemIconTint="#B12252"
         app:menu="@menu/menu">
 
     </android.support.design.widget.NavigationView>

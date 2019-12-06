@@ -8,15 +8,18 @@
         <item android:id="@+id/employees"
 
             android:title="Employees"
+            android:icon="@drawable/ic_action_employees"
             />
         <item android:id="@+id/add_employee"
 
             android:title="Add Employee"
+            android:icon="@drawable/ic_action_employeesaddplus"
 
             />
         <item android:id="@+id/logout"
 
             android:title="Logout"
+            android:icon="@drawable/ic_action_logout"
             />
 
     </group>
