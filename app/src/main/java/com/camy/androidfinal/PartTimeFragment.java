@@ -18,7 +18,20 @@ public class PartTimeFragment extends Fragment implements DataFromAddEmployeeFra
 
 
 
+    TextView name;
+    TextView age;
+    RadioGroup gender;
+    TextView dateOfBirth;
+    RadioGroup vehicle;
 
+    TextView ratePerHour;
+    TextView numberOfHours;
+
+
+    RadioGroup parttimeType;
+    FragmentManager fragmentManager;
+    CommissionBasedFragment commissionBasedFragment;
+    FixBasedFragment fixBasedFragment;
 
 
 
