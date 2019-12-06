@@ -23,5 +23,5 @@ import model.enums.Gender;
 
 public class InternFragment extends Fragment implements DataFromAddEmployeeFragment {
 
-    
+
 }
