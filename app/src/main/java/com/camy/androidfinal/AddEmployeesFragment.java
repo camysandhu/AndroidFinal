@@ -16,6 +16,15 @@ import android.widget.Toast;
 
 public class AddEmployeesFragment extends Fragment implements View.OnClickListener {
 
+    TextView text_age;
+    TextView text_name;
+    TextView text_date_of_birth;
+    RadioGroup gender;
+    RadioGroup vehicle;
+    RadioGroup employementtype;
+    FullTimeFragment fullTimeFragment;
+    PartTimeFragment partTimeFragment;
+    InternFragment internFragment;
 
 
     @Nullable
