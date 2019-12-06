@@ -38,9 +38,8 @@ public class InternFragment extends Fragment implements DataFromAddEmployeeFragm
         return inflater.inflate(R.layout.intern_fragment_layout, container, false);
 
 
-
-
     }
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -50,4 +49,12 @@ public class InternFragment extends Fragment implements DataFromAddEmployeeFragm
 
 
         this.addIntern = view.findViewById(R.id.btn_add_intern);
+
+        this.addIntern.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                
+            }
+        });
+    }
 }
