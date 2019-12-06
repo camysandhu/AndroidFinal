@@ -38,6 +38,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
                 else
                 {
+                    showAlertError();
 
 //                    loginUsername.setError("Fill an Adequate Email");
 //                    loginPassword.setError("Fill an Adequate Password");
@@ -45,6 +46,18 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+    public void showAlertError()
+    {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+
+        alertDialogBuilder.setTitle("Login error");
+
+
+
+        AlertDialog mAlertDialog=alertDialogBuilder.create();
+        mAlertDialog.show();
+    }
+
 
 
     }
