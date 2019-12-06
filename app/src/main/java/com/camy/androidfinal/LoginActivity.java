@@ -24,6 +24,28 @@ public class LoginActivity extends AppCompatActivity {
         loginUsername.setText("user@employee.com");
         loginPassword.setText("s3cr3t");
 
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                // user@employee.com/s3cr3t
+                if(loginUsername.getText().toString().trim().equals("user@employee.com")
+                        && loginPassword.getText().toString().trim().equals("s3cr3t"))
+                {
+                    Intent mIntent = new Intent(LoginActivity.this, NavigationDrawerAct.class);
+                    startActivity(mIntent);
+
+                }
+                else
+                {
+
+//                    loginUsername.setError("Fill an Adequate Email");
+//                    loginPassword.setError("Fill an Adequate Password");
+                }
+            }
+        });
+    }
+
 
     }
-}
+
