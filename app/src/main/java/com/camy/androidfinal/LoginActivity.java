@@ -9,7 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class LoginActivity extends AppCompatActivity {
-
+    EditText loginUsername,loginPassword;
+    Button loginButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
