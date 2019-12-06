@@ -34,5 +34,19 @@ public class FixBasedFragment extends Fragment implements DataFromPartTimeFragme
 
     TextView fixedamount;
     Button addFixedBasedEmployee;
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fix_based_fragment_layout, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        this.fixedamount = view.findViewById(R.id.text_fixamount);
+
+
+        this.addFixedBasedEmployee = view.findViewById(R.id.btn_add_fix_based);
 
 }
