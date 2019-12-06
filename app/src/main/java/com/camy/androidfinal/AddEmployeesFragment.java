@@ -68,7 +68,51 @@ public class AddEmployeesFragment extends Fragment implements View.OnClickListen
             }
         });
 
+        this.employementtype = view.findViewById(R.id.radio_group_employment);
+        this.employementtype.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
 
+                FragmentTransaction fragmentTransaction;
+
+                switch (checkedId)
+                {
+                    case R.id.radio_parttime :
+                        if(AddEmployeesFragment.this.partTimeFragment  == null)
+                        {
+                            AddEmployeesFragment.this.partTimeFragment = new PartTimeFragment();
+                            AddEmployeesFragment.this.partTimeFragment.viewsFromAddEmployeeFragment(text_name, text_age ,gender, text_date_of_birth , vehicle);
+                        }
+                        fragmentTransaction = AddEmployeesFragment.this.fragmentManager.beginTransaction();
+                        fragmentTransaction.replace(R.id.frame_layout_employment, AddEmployeesFragment.this.partTimeFragment);
+                        fragmentTransaction.commit();
+                        Toast.makeText(AddEmployeesFragment.this.getContext(), "parttime" , Toast.LENGTH_LONG).show();
+                        break;
+                    case R.id.radio_fulltime :
+                        if(AddEmployeesFragment.this.fullTimeFragment  == null)
+                        {
+                            AddEmployeesFragment.this.fullTimeFragment = new FullTimeFragment();
+                            AddEmployeesFragment.this.fullTimeFragment.viewsFromAddEmployeeFragment(text_name, text_age ,gender , text_date_of_birth , vehicle);
+                        }
+                        fragmentTransaction = AddEmployeesFragment.this.fragmentManager.beginTransaction();
+                        fragmentTransaction.replace(R.id.frame_layout_employment, AddEmployeesFragment.this.fullTimeFragment);
+                        fragmentTransaction.commit();
+                        Toast.makeText(AddEmployeesFragment.this.getContext(), "fulltime" , Toast.LENGTH_LONG).show();
+                        break;
+                    case R.id.radio_intern :
+                        if(AddEmployeesFragment.this.internFragment  == null)
+                        {
+                            AddEmployeesFragment.this.internFragment = new InternFragment();
+                            AddEmployeesFragment.this.internFragment.viewsFromAddEmployeeFragment(text_name, text_age ,gender , text_date_of_birth , vehicle);
+                        }
+                        fragmentTransaction = AddEmployeesFragment.this.fragmentManager.beginTransaction();
+                        fragmentTransaction.replace(R.id.frame_layout_employment, AddEmployeesFragment.this.internFragment);
+                        fragmentTransaction.commit();
+                        Toast.makeText(AddEmployeesFragment.this.getContext(), "intern" , Toast.LENGTH_LONG).show();
+                        break;
+                }
+            }
+        });
     }
 
 
