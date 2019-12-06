@@ -102,4 +102,12 @@ public class FullTimeFragment extends Fragment implements DataFromAddEmployeeFra
             }
         });
     }
-            }
+    @Override
+    public void viewsFromAddEmployeeFragment(TextView name, TextView age, RadioGroup gender, TextView dateOfBirth , RadioGroup vehicle) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.dateOfBirth = dateOfBirth;
+        this.vehicle = vehicle;
+    }
+}
