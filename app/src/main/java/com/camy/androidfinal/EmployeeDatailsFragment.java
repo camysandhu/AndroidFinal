@@ -23,7 +23,16 @@ import model.enums.Gender;
 
 public class EmployeeDatailsFragment extends Fragment implements DateFromEmployeeDetailsFragment {
 
-
+    Employee employee;
+    TextView name;
+    TextView age;
+    TextView gender;
+    TextView vehicle;
+    CardView parttime_card;
+    CardView fulltime_card;
+    CardView intern_card;
+    TextView employment_type;
+    TextView total_earning;
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
