@@ -24,5 +24,13 @@ import model.enums.Gender;
 public class FullTimeFragment extends Fragment implements DataFromAddEmployeeFragment {
 
 
+    TextView name;
+    TextView age;
+    RadioGroup gender;
+    TextView dateOfBirth;
+    RadioGroup vehicle;
 
+    TextView salary;
+    TextView bonus;
+    Button addIntern;
 }
