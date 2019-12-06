@@ -21,6 +21,9 @@ public class LoginActivity extends AppCompatActivity {
         loginPassword = findViewById(R.id.edPassword);
         loginButton = findViewById(R.id.btnLogin);
 
+        loginUsername.setText("user@employee.com");
+        loginPassword.setText("s3cr3t");
+
 
     }
 }
