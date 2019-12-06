@@ -25,7 +25,9 @@ public class AddEmployeesFragment extends Fragment implements View.OnClickListen
     FullTimeFragment fullTimeFragment;
     PartTimeFragment partTimeFragment;
     InternFragment internFragment;
+
     FragmentManager fragmentManager;
+
 
     @Nullable
     @Override
@@ -37,6 +39,7 @@ public class AddEmployeesFragment extends Fragment implements View.OnClickListen
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
         this.vehicle = view.findViewById(R.id.radio_group_vehicle);
         this.text_age = view.findViewById(R.id.text_age);
         this.text_name = view.findViewById(R.id.text_name);
@@ -67,6 +70,8 @@ public class AddEmployeesFragment extends Fragment implements View.OnClickListen
                 }
             }
         });
+
+
 
         this.employementtype = view.findViewById(R.id.radio_group_employment);
         this.employementtype.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -114,11 +119,17 @@ public class AddEmployeesFragment extends Fragment implements View.OnClickListen
             }
         });
 
-        @Override
-        public void onClick(View v) {
-            DatePickerFragment dtfragment = new DatePickerFragment();
-            dtfragment.show(getActivity().getSupportFragmentManager(), "DatePicker");
-        }
+
+
+
+
+
+    }
+
+    @Override
+    public void onClick(View v) {
+        DatePickerFragment dtfragment = new DatePickerFragment();
+        dtfragment.show(getActivity().getSupportFragmentManager(), "DatePicker");
     }
 
 
