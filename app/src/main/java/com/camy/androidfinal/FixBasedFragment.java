@@ -23,4 +23,16 @@ import model.enums.Gender;
 
 public class FixBasedFragment extends Fragment implements DataFromPartTimeFragment {
 
+
+    TextView name;
+    TextView age;
+    RadioGroup gender;
+    TextView ratePerHour;
+    TextView numberOfHours;
+    TextView dateOfBirth;
+    RadioGroup vehicle;
+
+    TextView fixedamount;
+    Button addFixedBasedEmployee;
+
 }
