@@ -33,6 +33,12 @@ public class EmployeeDatailsFragment extends Fragment implements DateFromEmploye
     CardView intern_card;
     TextView employment_type;
     TextView total_earning;
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.employee_details_fragment, container, false);
+    }˚
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
