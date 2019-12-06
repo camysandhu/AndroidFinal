@@ -8,5 +8,13 @@
     android:orientation="vertical">
 
 
-
+    <TextView
+        android:id="@+id/text_employment_type_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="TextView"
+        android:textSize="18sp" />
 </LinearLayout>
