@@ -24,6 +24,12 @@ import model.abstracts.Employee;
 
 public class EmployeeFragment extends Fragment   {
 
+    ArrayList<Employee> employees_list;
+    Context con;
+    RecyclerView recyclerView;
+    CustomAdapterForRecyclerView adapter;
 
+    FragmentTransaction fragmentTransaction;
+    EmployeeDatailsFragment employeeDatailsFragment;
 
 }
