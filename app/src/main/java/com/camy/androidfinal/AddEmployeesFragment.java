@@ -50,6 +50,25 @@ public class AddEmployeesFragment extends Fragment implements View.OnClickListen
         this.text_date_of_birth.setOnClickListener(this) ;
 
         this.gender = view.findViewById(R.id.radio_group_gender);
+        this.gender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId)
+                {
+                    case R.id.radio_female :
+                        // Toast.makeText(AddEmployeesFragment.this.getContext(), "Female" , Toast.LENGTH_LONG).show();
+                        Snackbar.make(group,"Female", Snackbar.LENGTH_SHORT).show();
+                        break;
+                    default:
+                        //Toast.makeText(AddEmployeesFragment.this.getContext(), "male" , Toast.LENGTH_LONG).show();
+
+                        Snackbar.make(group,"Male", Snackbar.LENGTH_SHORT).show();
+                        break;
+                }
+            }
+        });
+
+
     }
 
 
