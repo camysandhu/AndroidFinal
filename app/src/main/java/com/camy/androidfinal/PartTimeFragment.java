@@ -44,6 +44,11 @@ public class PartTimeFragment extends Fragment implements DataFromAddEmployeeFra
         this.dateOfBirth = dateOfBirth;
         this.vehicle = vehicle;
     }
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.parttime_fragment_layout, container, false);
+    }
 
 
     @Override
