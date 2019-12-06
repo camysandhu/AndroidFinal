@@ -18,7 +18,18 @@ import android.widget.Toast;
 
 public class NavigationDrawerAct extends AppCompatActivity {
 
+    private WebView webView;
 
+
+    Toolbar customToolBar;
+    NavigationView nav_view;
+    FragmentManager fragmentManager;
+    FragmentTransaction fragmentTransaction;
+
+    AddEmployeesFragment addEmployeesFragment;
+    EmployeeFragment employeeFragment;
+
+    DrawerLayout nav_drawer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
