@@ -113,6 +113,12 @@ public class AddEmployeesFragment extends Fragment implements View.OnClickListen
                 }
             }
         });
+
+        @Override
+        public void onClick(View v) {
+            DatePickerFragment dtfragment = new DatePickerFragment();
+            dtfragment.show(getActivity().getSupportFragmentManager(), "DatePicker");
+        }
     }
 
 
