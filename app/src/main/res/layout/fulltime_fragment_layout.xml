@@ -7,5 +7,20 @@
 
 
 
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/text_salary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:ems="10"
+            android:hint="Salary amount"
+            android:inputType="number" />
+
+    </android.support.design.widget.TextInputLayout>
+
     
 </LinearLayout>
