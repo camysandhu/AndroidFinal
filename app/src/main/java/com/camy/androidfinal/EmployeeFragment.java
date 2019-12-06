@@ -24,6 +24,6 @@ import model.abstracts.Employee;
 
 public class EmployeeFragment extends Fragment   {
 
-   
+
 
 }
