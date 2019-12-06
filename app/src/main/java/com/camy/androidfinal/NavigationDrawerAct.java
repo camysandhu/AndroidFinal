@@ -35,6 +35,30 @@ public class NavigationDrawerAct extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation_drawer);
 
+        this.nav_drawer = (DrawerLayout) findViewById(R.id.nav_drawer);
+        employeeFragment = new EmployeeFragment();
+
+        //reference -  https://stackoverflow.com/questions/26486730/in-android-app-toolbar-settitle-method-has-no-effect-application-name-is-shown
+        // for displaying title on ToolBar
+        // reference - https://developer.android.com/training/implementing-navigation/nav-drawer
+        // for Add the nav drawer button
+        this.customToolBar = findViewById(R.id.Customtoolbar);
+        setSupportActionBar(this.customToolBar);
+        final ActionBar actionbar = getSupportActionBar();
+        actionbar.setTitle("My title");
+        actionbar.setDisplayHomeAsUpEnabled(true);
+
+
+        fragmentManager = getSupportFragmentManager();
+        this.fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.add(R.id.frame_layout, employeeFragment);
+        fragmentTransaction.commit();
+        this.customToolBar.setTitle("Employees");
+
+
+
+        nav_view = findViewById(R.id.nav_view);
+
 
     }
 }
