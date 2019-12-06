@@ -91,7 +91,8 @@ public class AddEmployeesFragment extends Fragment implements View.OnClickListen
                         fragmentTransaction = AddEmployeesFragment.this.fragmentManager.beginTransaction();
                         fragmentTransaction.replace(R.id.frame_layout_employment, AddEmployeesFragment.this.partTimeFragment);
                         fragmentTransaction.commit();
-                        Toast.makeText(AddEmployeesFragment.this.getContext(), "parttime" , Toast.LENGTH_LONG).show();
+                        Snackbar.make(employementtype,"ParTime Employee",Snackbar.LENGTH_SHORT).show();
+                       // Toast.makeText(AddEmployeesFragment.this.getContext(), "parttime" , Toast.LENGTH_LONG).show();
                         break;
                     case R.id.radio_fulltime :
                         if(AddEmployeesFragment.this.fullTimeFragment  == null)
@@ -102,7 +103,8 @@ public class AddEmployeesFragment extends Fragment implements View.OnClickListen
                         fragmentTransaction = AddEmployeesFragment.this.fragmentManager.beginTransaction();
                         fragmentTransaction.replace(R.id.frame_layout_employment, AddEmployeesFragment.this.fullTimeFragment);
                         fragmentTransaction.commit();
-                        Toast.makeText(AddEmployeesFragment.this.getContext(), "fulltime" , Toast.LENGTH_LONG).show();
+                        Snackbar.make(employementtype,"FullTime Employee",Snackbar.LENGTH_SHORT).show();
+                       // Toast.makeText(AddEmployeesFragment.this.getContext(), "fulltime" , Toast.LENGTH_LONG).show();
                         break;
                     case R.id.radio_intern :
                         if(AddEmployeesFragment.this.internFragment  == null)
@@ -113,7 +115,8 @@ public class AddEmployeesFragment extends Fragment implements View.OnClickListen
                         fragmentTransaction = AddEmployeesFragment.this.fragmentManager.beginTransaction();
                         fragmentTransaction.replace(R.id.frame_layout_employment, AddEmployeesFragment.this.internFragment);
                         fragmentTransaction.commit();
-                        Toast.makeText(AddEmployeesFragment.this.getContext(), "intern" , Toast.LENGTH_LONG).show();
+                        Snackbar.make(employementtype,"Intern Employee",Snackbar.LENGTH_SHORT).show();
+                       // Toast.makeText(AddEmployeesFragment.this.getContext(), "intern" , Toast.LENGTH_LONG).show();
                         break;
                 }
             }

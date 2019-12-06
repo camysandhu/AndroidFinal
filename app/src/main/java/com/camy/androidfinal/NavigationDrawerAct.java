@@ -3,6 +3,7 @@ package com.camy.androidfinal;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
@@ -70,7 +71,8 @@ public class NavigationDrawerAct extends AppCompatActivity {
                         fragmentTransaction.commit();
                         actionbar.setTitle("Employees");
                         NavigationDrawerAct.this.nav_drawer.closeDrawer(Gravity.START, true);
-                        Toast.makeText(NavigationDrawerAct.this, "Employees" , Toast.LENGTH_LONG).show();
+                        Snackbar.make(nav_view,"Employee",Snackbar.LENGTH_SHORT).show();
+                       // Toast.makeText(NavigationDrawerAct.this, "Employees" , Toast.LENGTH_LONG).show();
                         break;
                     case R.id.add_employee :
                         if(addEmployeesFragment == null)
@@ -82,7 +84,8 @@ public class NavigationDrawerAct extends AppCompatActivity {
                         fragmentTransaction.commit();
                         actionbar.setTitle("Add employee");
                         NavigationDrawerAct.this.nav_drawer.closeDrawer(Gravity.START, true);
-                        Toast.makeText(NavigationDrawerAct.this, "Add employee" , Toast.LENGTH_LONG).show();
+                        Snackbar.make(nav_view,"Add Employee",Snackbar.LENGTH_SHORT).show();
+                      //  Toast.makeText(NavigationDrawerAct.this, "Add employee" , Toast.LENGTH_LONG).show();
                         break;
 
                     case R.id.logout :
