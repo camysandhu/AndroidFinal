@@ -102,4 +102,15 @@ public class FixBasedFragment extends Fragment implements DataFromPartTimeFragme
         });
 
     }
+    @Override
+    public void viewsFromPartTimeFragment(TextView name, TextView age, RadioGroup gender, TextView ratePerHour, TextView numberOfHours, TextView dateOfBirth, RadioGroup vehicle) {
+
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.ratePerHour = ratePerHour;
+        this.numberOfHours = numberOfHours;
+        this.dateOfBirth = dateOfBirth;
+        this.vehicle = vehicle;
+    }
 }
