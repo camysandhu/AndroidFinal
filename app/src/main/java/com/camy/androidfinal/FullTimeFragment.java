@@ -55,9 +55,17 @@ public class FullTimeFragment extends Fragment implements DataFromAddEmployeeFra
 
         this.addIntern.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                
+            public void onClick(View v) {
+
+
+                if (!bonus.getText().toString().isEmpty() && !salary.getText().toString().isEmpty() && !name.getText().toString().isEmpty() && !age.getText().toString().isEmpty() && !(gender.getCheckedRadioButtonId() == -1)) {
+
+
+                    String name_string = name.getText().toString();
+                    int age_int = Integer.parseInt(age.getText().toString().substring(6));
+                    Gender gender_enum = null;
+                    int salary_int = Integer.parseInt(salary.getText().toString());
+                    int bonus_int = Integer.parseInt(bonus.getText().toString());
+                }
+            });
             }
-        });
-    }
-}
