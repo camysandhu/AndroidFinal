@@ -55,6 +55,13 @@ public class PartTimeFragment extends Fragment implements DataFromAddEmployeeFra
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        this.ratePerHour = view.findViewById(R.id.text_rateper_hour);
+        this.numberOfHours = view.findViewById(R.id.text_number_of_hours);
+
+        this.fragmentManager = getActivity().getSupportFragmentManager();
+
+        this.parttimeType = getActivity().findViewById(R.id.radio_group_parttime_type);
+
 
 
 
