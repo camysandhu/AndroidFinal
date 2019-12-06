@@ -40,4 +40,17 @@ public class FullTimeFragment extends Fragment implements DataFromAddEmployeeFra
         return inflater.inflate(R.layout.fulltime_fragment_layout, container, false);
 
     }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+
+        this.salary = view.findViewById(R.id.text_salary);
+
+        this.bonus = view.findViewById(R.id.text_bonus);
+
+
+        this.addIntern = view.findViewById(R.id.btn_fulltime_employee);
+    }
 }
