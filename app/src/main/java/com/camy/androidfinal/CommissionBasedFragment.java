@@ -45,7 +45,9 @@ public class CommissionBasedFragment extends Fragment implements DataFromPartTim
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        this.commission = view.findViewById(R.id.text_commission);
 
+        this.addParttimeCommissionBasedEmployee = view.findViewById(R.id.btn_add_commission_based);
 
     }
 }
