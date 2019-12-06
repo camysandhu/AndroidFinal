@@ -62,7 +62,12 @@ public class PartTimeFragment extends Fragment implements DataFromAddEmployeeFra
 
         this.parttimeType = getActivity().findViewById(R.id.radio_group_parttime_type);
 
+        this.parttimeType.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
+            }
+        });
 
 
 
