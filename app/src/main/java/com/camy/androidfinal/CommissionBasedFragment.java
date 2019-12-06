@@ -37,7 +37,11 @@ public class CommissionBasedFragment extends Fragment implements DataFromPartTim
     Button addParttimeCommissionBasedEmployee;
 
 
-
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.commission_based_fragment_layout, container, false);
+    }
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
