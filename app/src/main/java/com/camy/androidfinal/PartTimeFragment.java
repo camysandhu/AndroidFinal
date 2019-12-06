@@ -64,10 +64,39 @@ public class PartTimeFragment extends Fragment implements DataFromAddEmployeeFra
 
         this.parttimeType.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
 
+
+                FragmentTransaction fragmentTransaction;
+                switch (checkedId)
+                {
+                    case R.id.radio_commission_parttime :
+                        if(PartTimeFragment.this.commissionBasedFragment == null)
+                        {
+                            PartTimeFragment.this.commissionBasedFragment = new CommissionBasedFragment();
+                            PartTimeFragment.this.commissionBasedFragment.viewsFromPartTimeFragment(name,age,gender,ratePerHour, numberOfHours, dateOfBirth, vehicle);
+                        }
+                        PartTimeFragment.this.fragmentManager.beginTransaction();
+                        fragmentTransaction = PartTimeFragment.this.fragmentManager.beginTransaction();
+                        fragmentTransaction.replace(R.id.frame_layout_parttime_type, PartTimeFragment.this.commissionBasedFragment);
+                        fragmentTransaction.commit();
+                        break;
+
+                    case R.id.radio_fix_parttime :
+                        if(PartTimeFragment.this.fixBasedFragment == null)
+                        {
+                            PartTimeFragment.this.fixBasedFragment = new FixBasedFragment();
+                            PartTimeFragment.this.fixBasedFragment.viewsFromPartTimeFragment(name,age,gender,ratePerHour, numberOfHours, dateOfBirth, vehicle);
+                        }
+                        PartTimeFragment.this.fragmentManager.beginTransaction();
+                        fragmentTransaction = PartTimeFragment.this.fragmentManager.beginTransaction();
+                        fragmentTransaction.replace(R.id.frame_layout_parttime_type, PartTimeFragment.this.fixBasedFragment);
+                        fragmentTransaction.commit();
+                }
             }
         });
+
+
 
 
 
