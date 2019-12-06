@@ -23,6 +23,7 @@ import model.enums.Gender;
 
 public class EmployeeDatailsFragment extends Fragment implements DateFromEmployeeDetailsFragment {
 
+
     Employee employee;
     TextView name;
     TextView age;
@@ -38,11 +39,11 @@ public class EmployeeDatailsFragment extends Fragment implements DateFromEmploye
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.employee_details_fragment, container, false);
-    }˚
+    }
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
         this.name = view.findViewById(R.id.text_name_value);
         this.age = view.findViewById(R.id.text_age_value);
         this.gender = view.findViewById(R.id.text_gender_value);
@@ -56,8 +57,6 @@ public class EmployeeDatailsFragment extends Fragment implements DateFromEmploye
         this.name.setText(employee.getName().toUpperCase());
         this.age.setText(employee.getAge()+"");
         this.gender.setText(employee.getGen() == Gender.MALE ? "MALE" : "FEMALE");
-        this.vehicle.setText(employee.getVehicle() == null ? "null" : employee.getVehicle() instanceof Car ? "CAR" : "MOTER CYCLE");
-
         this.vehicle.setText(employee.getVehicle() == null ? "null" : employee.getVehicle() instanceof Car ? "CAR" : "MOTER CYCLE");
 
         if(employee instanceof PartTime)
@@ -129,8 +128,5 @@ public class EmployeeDatailsFragment extends Fragment implements DateFromEmploye
     @Override
     public void employeeObject(Employee employee) {
         this.employee = employee;
-    }
-}
-
     }
 }
