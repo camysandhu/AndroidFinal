@@ -52,5 +52,12 @@ public class FullTimeFragment extends Fragment implements DataFromAddEmployeeFra
 
 
         this.addIntern = view.findViewById(R.id.btn_fulltime_employee);
+
+        this.addIntern.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                
+            }
+        });
     }
 }
