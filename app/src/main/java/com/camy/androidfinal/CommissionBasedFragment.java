@@ -25,7 +25,16 @@ public class CommissionBasedFragment extends Fragment implements DataFromPartTim
 {
 
 
+    TextView name;
+    TextView age;
+    RadioGroup gender;
+    TextView ratePerHour;
+    TextView numberOfHours;
+    TextView dateOfBirth;
+    RadioGroup vehicle;
 
+    TextView commission;
+    Button addParttimeCommissionBasedEmployee;
 
 
 
