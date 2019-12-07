@@ -8,12 +8,12 @@ import model.abstracts.Employee;
 import model.enums.Gender;
 
 
-public class SingleToneExample {
+public class Singleton {
 			
 	
-			static SingleToneExample obj = null;
+			static Singleton obj = null;
 			List<Employee> employees;
-			private SingleToneExample()
+			private Singleton()
 			{
 
 
@@ -31,11 +31,11 @@ public class SingleToneExample {
 				addIntoList(commissionBasedPartTime);
 				addIntoList(fixedBasedPartTime);
 			}
-			public static SingleToneExample getObj()
+			public static Singleton getObj()
 			{
 				if(obj == null)
 				{
-					obj = new SingleToneExample();
+					obj = new Singleton();
 
 				}
 				return obj;

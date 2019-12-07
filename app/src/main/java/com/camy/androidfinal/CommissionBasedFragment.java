@@ -17,7 +17,7 @@ import com.camy.androidfinal.interfaces.DataFromPartTimeFragment;
 import model.Car;
 import model.CommissionBasedPartTime;
 import model.MotorCycle;
-import model.SingleToneExample;
+import model.Singleton;
 import model.abstracts.Vehicle;
 import model.enums.Gender;
 
@@ -81,7 +81,7 @@ public class CommissionBasedFragment extends Fragment implements DataFromPartTim
                             gender_enum = Gender.MALE;
                             break;
                     }
-                    SingleToneExample.getObj().addIntoList(new CommissionBasedPartTime(commission_int, rate_int, hours_float, name_string, age_int, gender_enum, vehicle_Vehicle));
+                    Singleton.getObj().addIntoList(new CommissionBasedPartTime(commission_int, rate_int, hours_float, name_string, age_int, gender_enum, vehicle_Vehicle));
                     Toast.makeText(getActivity(), "Employee Added", Toast.LENGTH_LONG).show();
                     commission.setText(null);
                     ratePerHour.setText(null);

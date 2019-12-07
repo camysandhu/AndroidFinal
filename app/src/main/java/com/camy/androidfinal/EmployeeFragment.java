@@ -8,7 +8,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +16,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 import CustomAdapters.CustomAdapterForRecyclerView;
-import model.SingleToneExample;
+import model.Singleton;
 import model.abstracts.Employee;
 
 
@@ -41,7 +40,7 @@ public class EmployeeFragment extends Fragment   {
         View v =  inflater.inflate(R.layout.employee_fragment_layout, container, false);
 
 
-        employees_list = SingleToneExample.getObj().getList();
+        employees_list = Singleton.getObj().getList();
 
         this.recyclerView = v.findViewById(R.id.recycler_view);
         adapter = new CustomAdapterForRecyclerView(employees_list, this.con, new CustomAdapterForRecyclerView.SetCustomClickListener() {

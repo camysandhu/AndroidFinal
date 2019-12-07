@@ -17,7 +17,7 @@ import com.camy.androidfinal.interfaces.DataFromAddEmployeeFragment;
 import model.Car;
 import model.FullTime;
 import model.MotorCycle;
-import model.SingleToneExample;
+import model.Singleton;
 import model.abstracts.Vehicle;
 import model.enums.Gender;
 
@@ -85,7 +85,7 @@ public class FullTimeFragment extends Fragment implements DataFromAddEmployeeFra
                             break;
 
                     }
-                    SingleToneExample.getObj().addIntoList(new FullTime(salary_int, bonus_int, name_string, age_int, gender_enum, vehicle_Vehicle));
+                    Singleton.getObj().addIntoList(new FullTime(salary_int, bonus_int, name_string, age_int, gender_enum, vehicle_Vehicle));
                     Toast.makeText(getActivity(), "Employee Added", Toast.LENGTH_LONG).show();
                     salary.setText(null);
                     bonus.setText(null);

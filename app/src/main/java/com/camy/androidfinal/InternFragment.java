@@ -17,7 +17,7 @@ import com.camy.androidfinal.interfaces.DataFromAddEmployeeFragment;
 import model.Car;
 import model.Intern;
 import model.MotorCycle;
-import model.SingleToneExample;
+import model.Singleton;
 import model.abstracts.Vehicle;
 import model.enums.Gender;
 
@@ -83,7 +83,7 @@ public class InternFragment extends Fragment implements DataFromAddEmployeeFragm
                             break;
 
                     }
-                    SingleToneExample.getObj().addIntoList(new Intern(schoolname_string, name_string, age_int, gender_enum, vehicle_Vehicle));
+                    Singleton.getObj().addIntoList(new Intern(schoolname_string, name_string, age_int, gender_enum, vehicle_Vehicle));
                     Toast.makeText(getActivity(), "Employee Added", Toast.LENGTH_LONG).show();
                     schoolName.setText(null);
                     name.setText(null);

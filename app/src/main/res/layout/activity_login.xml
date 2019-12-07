@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F7E4E9"
     android:orientation="vertical"
     tools:context=".LoginActivity">
 
@@ -45,10 +46,12 @@
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_marginTop="32dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login" />
+        android:layout_marginTop="32dp"
+        android:background="#AC224D"
+        android:text="Login"
+        android:textAlignment="center" />
 
 
-    </LinearLayout>
+</LinearLayout>

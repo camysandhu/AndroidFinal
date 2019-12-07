@@ -17,7 +17,7 @@ import com.camy.androidfinal.interfaces.DataFromPartTimeFragment;
 import model.Car;
 import model.FixedBasedPartTime;
 import model.MotorCycle;
-import model.SingleToneExample;
+import model.Singleton;
 import model.abstracts.Vehicle;
 import model.enums.Gender;
 
@@ -82,7 +82,7 @@ public class FixBasedFragment extends Fragment implements DataFromPartTimeFragme
                             gender_enum = Gender.MALE;
                             break;
                     }
-                    SingleToneExample.getObj().addIntoList(new FixedBasedPartTime(fixedamount_int, rate_int, hours_float, name_string, age_int, gender_enum, vehicle_Vehicle));
+                    Singleton.getObj().addIntoList(new FixedBasedPartTime(fixedamount_int, rate_int, hours_float, name_string, age_int, gender_enum, vehicle_Vehicle));
                     Toast.makeText(getActivity(), "Employee Added", Toast.LENGTH_LONG).show();
                     fixedamount.setText(null);
                     ratePerHour.setText(null);
