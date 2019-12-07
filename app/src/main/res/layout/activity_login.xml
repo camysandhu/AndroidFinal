@@ -12,10 +12,11 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#922349"
         android:text="Employee Payroll System"
         android:textAlignment="center"
-        android:textColor="#181818"
 
+        android:textColor="#D3BDBD"
         android:textSize="30sp"
         android:textStyle="bold" />
 
@@ -48,6 +49,7 @@
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="50dp"
         android:layout_marginTop="32dp"
         android:background="#AC224D"
         android:text="Login"
