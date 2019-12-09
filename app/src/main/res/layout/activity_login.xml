@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F7E4E9"
+    android:background="#F8EAEB"
     android:orientation="vertical"
     tools:context=".LoginActivity">
 
@@ -25,7 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_marginTop="16dp"
-        app:srcCompat="@mipmap/ic_launcher_bike" />
+        app:srcCompat="@drawable/payroll" />
 
     <EditText
         android:id="@+id/edUsername"
@@ -53,7 +53,8 @@
         android:layout_marginTop="32dp"
         android:background="#AC224D"
         android:text="Login"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textColor="#FFFF" />
 
 
 </LinearLayout>
