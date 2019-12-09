@@ -5,21 +5,23 @@
 
     <group android:checkableBehavior="single" >
 
-        <item android:id="@+id/employees"
+        <item android:id="@+id/home123"
+              android:title="Home"
+              android:icon="@drawable/ic_action_home"
+            />
 
-            android:title="Employees"
-            android:icon="@drawable/ic_action_employees"
+        <item android:id="@+id/employees"
+              android:title="Employees"
+              android:icon="@drawable/ic_action_employees"
             />
         <item android:id="@+id/add_employee"
-
-            android:title="Add Employee"
-            android:icon="@drawable/ic_action_employeesaddplus"
+              android:title="Add Employee"
+              android:icon="@drawable/ic_action_employeesaddplus"
 
             />
         <item android:id="@+id/logout"
-
-            android:title="Logout"
-            android:icon="@drawable/ic_action_logout"
+              android:title="Logout"
+              android:icon="@drawable/ic_action_logout"
             />
 
     </group>

@@ -29,6 +29,7 @@ public class NavigationDrawerAct extends AppCompatActivity {
     AddEmployeesFragment addEmployeesFragment;
     EmployeeFragment employeeFragment;
     DrawerLayout nav_drawer;
+    HomeFragment homeFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +63,21 @@ public class NavigationDrawerAct extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId())
                 {
+                    case R.id.home123:
+                        if(homeFragment == null)
+                        {
+                           homeFragment = new HomeFragment();
+                        }
+                        fragmentTransaction = fragmentManager.beginTransaction();
+                        fragmentTransaction.replace(R.id.frame_layout, homeFragment, null);
+                        fragmentTransaction.commit();
+                        actionbar.setTitle("Home");
+                        NavigationDrawerAct.this.nav_drawer.closeDrawer(Gravity.START, true);
+                        Snackbar.make(nav_view,"Home",Snackbar.LENGTH_SHORT).show();
+                        break;
+
+
+
                     case R.id.employees :
                         fragmentTransaction = fragmentManager.beginTransaction();
                         fragmentTransaction.replace(R.id.frame_layout, employeeFragment, null);
@@ -69,8 +85,10 @@ public class NavigationDrawerAct extends AppCompatActivity {
                         actionbar.setTitle("Employees");
                         NavigationDrawerAct.this.nav_drawer.closeDrawer(Gravity.START, true);
                         Snackbar.make(nav_view,"Employee",Snackbar.LENGTH_SHORT).show();
-                       // Toast.makeText(NavigationDrawerAct.this, "Employees" , Toast.LENGTH_LONG).show();
                         break;
+
+
+
                     case R.id.add_employee :
                         if(addEmployeesFragment == null)
                         {
@@ -82,15 +100,16 @@ public class NavigationDrawerAct extends AppCompatActivity {
                         actionbar.setTitle("Add employee");
                        NavigationDrawerAct.this.nav_drawer.closeDrawer(Gravity.START, true);
                         Snackbar.make(nav_view,"Add Employee",Snackbar.LENGTH_SHORT).show();
-                      //  Toast.makeText(NavigationDrawerAct.this, "Add employee" , Toast.LENGTH_LONG).show();
+
                         break;
 
                     case R.id.logout :
                         startActivity(new Intent(NavigationDrawerAct.this, LoginActivity.class));
-                        //Snackbar.make(nav_view,"Logout",Snackbar.LENGTH_SHORT).show();
                         Toast.makeText(NavigationDrawerAct.this, "Logout" , Toast.LENGTH_LONG).show();
                         break;
 
+                    default:
+                        throw new IllegalStateException("Unexpected value: " + menuItem.getItemId());
                 }
 
 
