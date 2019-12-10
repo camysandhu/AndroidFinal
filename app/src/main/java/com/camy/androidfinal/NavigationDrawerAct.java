@@ -1,5 +1,6 @@
 package com.camy.androidfinal;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -8,6 +9,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -108,8 +110,9 @@ public class NavigationDrawerAct extends AppCompatActivity {
                         Toast.makeText(NavigationDrawerAct.this, "Logout" , Toast.LENGTH_LONG).show();
                         break;
 
-                    default:
-                        throw new IllegalStateException("Unexpected value: " + menuItem.getItemId());
+                    case R.id.help:
+                        showAlertHelp();
+
                 }
 
 
@@ -121,6 +124,7 @@ public class NavigationDrawerAct extends AppCompatActivity {
 
     }
 
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -129,5 +133,28 @@ public class NavigationDrawerAct extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+    public void showAlertHelp()
+    {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+
+       alertDialogBuilder.setTitle("Contact Us ");
+        alertDialogBuilder.setMessage("Email Us: admin@payroll.com");
+       alertDialogBuilder.setMessage("Email Us: admin@payroll.com\n" +
+                "Contact Us: (+1)234-567-33333");
+        alertDialogBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //finish();
+            }
+        });
+        alertDialogBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        AlertDialog mAlertDialog = alertDialogBuilder.create();
+        mAlertDialog.show();
     }
 }
